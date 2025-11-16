@@ -1,14 +1,8 @@
-import { Platform } from 'react-native';
-
-// Platform bridge that picks web/native file
-let Component: any;
-if (Platform.OS === 'web') {
-    Component = require('./PortfolioSummary.web').default;
-} else {
-    Component = require('./PortfolioSummary.native').default;
-}
-
-export default Component as React.FC<any>;
+import React, { useState, useEffect, useMemo } from 'react';
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { getPortfolio } from '../services/cryptoService';
+import { PortfolioAsset } from '../types';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 interface PortfolioSummaryProps {
     isDarkMode: boolean;
@@ -40,7 +34,6 @@ const PortfolioSummary: React.FC<PortfolioSummaryProps> = ({ isDarkMode }) => {
     }, [assets]);
 
     const styles = getStyles(isDarkMode);
-    
     if (loading) return <View style={styles.centered}><ActivityIndicator size="large" /></View>;
 
     return (
@@ -183,4 +176,4 @@ const getStyles = (isDarkMode: boolean) => StyleSheet.create({
     },
 });
 
-// noop - platform-specific implementation is exported above
+export default PortfolioSummary;

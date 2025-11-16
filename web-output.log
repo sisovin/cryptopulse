@@ -1,0 +1,12 @@
+env: load .env.local
+env: export VITE_GEMINI_API_KEY
+Starting project at D:\laragon\www\mobiles\cryptopulse
+Starting Metro Bundler
+Waiting on http://localhost:8082
+Logs for your project will appear below.
+Web node_modules\expo\AppEntry.js ΓûôΓûôΓûôΓûôΓûôΓûôΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæ 42.7% (258/395)
+Web node_modules\expo\AppEntry.js ΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûæΓûæΓûæ 82.0% (727/868)
+Web Bundled 8253ms node_modules\expo\AppEntry.js (923 modules)
+Web Bundled 388ms node_modules\expo\AppEntry.js (1 module)
+Web node_modules\expo\AppEntry.js ΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæ  0.0% (0/1)
+Web Bundled 320ms node_modules\expo\AppEntry.js (1 module)

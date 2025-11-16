@@ -1,16 +1,31 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = process.env.API_KEY;
+// Support several env var locations:
+//  - process.env.API_KEY (mapped via Vite define)
+//  - process.env.GEMINI_API_KEY (also mapped)
+//  - import.meta.env.VITE_GEMINI_API_KEY (native Vite var)
+// Prefer process.env.* variables; Vite maps `VITE_GEMINI_API_KEY` to these during web builds.
+const API_KEY = process.env.API_KEY || process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
 
 if (!API_KEY) {
   console.warn("API_KEY is not set. Gemini API calls will fail.");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY! });
+// Only instantiate the client if the key is available. Otherwise, keep `ai` as `null` and
+// handle it in callers to avoid runtime errors when running in a browser without a key.
+let ai: GoogleGenAI | null = null;
+if (API_KEY) {
+  try {
+    ai = new GoogleGenAI({ apiKey: API_KEY });
+  } catch (err) {
+    console.error('Failed to initialize GoogleGenAI client:', err);
+    ai = null;
+  }
+}
 
 export const analyzeCryptoWithGemini = async (cryptoName: string): Promise<string> => {
-  if (!API_KEY) {
+  if (!API_KEY || !ai) {
     return "API Key not configured. Please set up your environment variables.";
   }
   try {
