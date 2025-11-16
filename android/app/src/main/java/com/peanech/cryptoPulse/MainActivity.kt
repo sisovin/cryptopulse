@@ -1,4 +1,4 @@
-package com.peanech.cryptoPulse
+package com.peanech.cryptopulse
 
 import android.os.Build
 import android.os.Bundle
@@ -59,3 +59,6 @@ class MainActivity : ReactActivity() {
       super.invokeDefaultOnBackPressed()
   }
 }
+// MainActivity moved to com.peanech.cryptopulse package
+// File retained only to support older references during migration.
+// Please use android/app/src/main/java/com/peanech/cryptopulse/MainActivity.kt instead.
