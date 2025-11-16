@@ -1,0 +1,20 @@
+You are Gemini 2.5 Pro.
+
+Task: I have a React + Vite app from Google AI Studio (cryptopulse) with `app.tsx`, 'google-services.json', '.env.local for the VITE_GEMINI_API_KEY', README.md and `package.json`.
+
+Steps:
+1. Initialize an Expo React Native project named "cryptoPulse" **inside the current folder** (do not create a new folder). This project needs Android support with React Native (used in the Android emulator) support HTML elements—you must use React Native components like <View>, <Text>, etc.
+2. "To make the app work on Android, all components need conversion:
+    - Replace <div> with <View>
+    - Replace <h1>, <p>, etc., with <Text>
+    - Replace <button> with <TouchableOpacity>
+    - Use React Native styles instead of Tailwind classes
+    - Handle events and refs differently"
+3. Replace the default `app.tsx` with my AI Studio `app.tsx`.
+4. Merge dependencies from my `package.json` and install them.
+5. Run `expo prebuild` to generate the `android/` folder.
+6. Set the package name to `com.peanech.cryptoPulse`.
+7. Skip app icon generation (I will provide my own 1024x1024 icon).
+8. Verify that Gradle and `AndroidManifest.xml` are correct and error-free.
+9. Stop once the `android/` folder is fully ready for Android Studio.
+10. When the project was accomplished, regenerate the comprehensive, modern README file this project.

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "9218932988",
+    "firebase_url": "https://cryptoapp-3e399-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cryptoapp-3e399",
+    "storage_bucket": "cryptoapp-3e399.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9218932988:android:3f0fc68c9b3332125b1779",
+        "android_client_info": {
+          "package_name": "com.peanech.cryptoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9218932988-61o9vdfj39pvn973r1qdmqjq63spffbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3_HhCgXIh0ZJdChN6vR2M1EYOfQ7RCj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9218932988-61o9vdfj39pvn973r1qdmqjq63spffbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9218932988:android:3f0fc68c9b3332125b1779",
+        "android_client_info": {
+          "package_name": "com.peanech.cryptoapp.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9218932988-61o9vdfj39pvn973r1qdmqjq63spffbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3_HhCgXIh0ZJdChN6vR2M1EYOfQ7RCj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9218932988-61o9vdfj39pvn973r1qdmqjq63spffbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
